@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portafolio</title>
+</head>
+<body>
+    <header class="barra-superior">
+        <h1>Nestor D. Duran Fuentes</h1>
+        <nav>
+            <a class="link" href="#Sobre-mi">Sobre mi</a>
+            <a class="link" href="#Proyectos">Proyectos</a>
+            <a class="link" href="#Contacto">Contacto</a>
+            <a class="link" href="../mascotas/mascotas.html">Ir a mascotas</a>
+        </nav>
+    </header>
+
+    <main class="tarjeta">
+
+        <section class="sobremi" id="Sobre-mi">
+            <h2>Sobre mi</h2>
+            <p>Hola, mi nombre es Nestor Daniel Duran Fuentes, tengo 22 años, ahora mismo estoy en riwi como coder</p>
+        </section>
+
+        <section class="proyectos" id="Proyectos">
+            <h2>Proyectos</h2>
+            <ul>
+                <li><a href="#">Cajero electronico</a></li>
+                <li><a href="#">Inventario</a></li>
+                <li><a href="#">Gestion de usuario</a></li>
+                <li><a href="#">Registro de estudiantes</a></li>
+            </ul>
+        </section>
+
+        <section class="contacto" id="Contacto">
+            <h2>Contacto</h2>
+            <form>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" placeholder="Ingrese su correo">
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea name="mensaje" id="mensaje" rows="4"></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>©2026</strong> Nes Dev · Hecho con HTML y CSS</p>
+    </footer>
+</body>
+</html>
