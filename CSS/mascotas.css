@@ -1,0 +1,156 @@
+/* Variables globales */
+:root {
+    --negro: #0f0f0f;
+    --negro-sec: #1a1a1a;
+    --dorado: #d4af37;
+    --texto: #eaeaea;
+    --gris: #aaaaaa;
+    --radio: 10px;
+    --sombra: 0 4px 15px rgba(0, 0, 0, 0.2);
+    --fuente-base: 1rem;
+    --fuente-sm: 0.875rem;
+}
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Imágenes responsivas */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+body {
+    background: linear-gradient(135deg, var(--negro), var(--negro-sec));
+    font-family: 'Segoe UI', sans-serif;
+    font-size: var(--fuente-base);
+    color: var(--texto);
+    min-height: 100vh;
+    padding-bottom: 3.75rem;
+}
+
+/* Header */
+header {
+    background: rgba(0, 0, 0, 0.85);
+    padding: 0.9rem 1.5rem;
+    border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+    box-shadow: var(--sombra);
+    margin-bottom: 1.875rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    color: var(--dorado);
+    font-size: 1.375rem;
+}
+
+/* Enlace de volver en el header */
+.link-volver {
+    color: var(--gris);
+    text-decoration: none;
+    font-size: var(--fuente-sm);
+    transition: color 0.3s;
+}
+
+.link-volver:hover {
+    color: var(--dorado);
+    text-decoration: underline;
+}
+
+/* Galería principal */
+.mascotas {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 0 1.25rem;
+}
+
+/* Grid de tarjetas - 3 columnas en escritorio */
+.contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    list-style: none;
+    padding: 0;
+    max-width: 75rem;
+    width: 100%;
+}
+
+/* Tarjeta de mascota */
+.tarjeta {
+    background-color: #2a2a2a;
+    border-radius: var(--radio);
+    box-shadow: var(--sombra);
+    overflow: hidden;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    transition: transform 0.3s;
+}
+
+.tarjeta:hover{
+    transform: translateY(-5px);
+}
+
+/* Imagen de la tarjeta */
+.imagen-wrapper img {
+    width: 100%;
+    height: 12.5rem;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Texto dentro de la tarjeta */
+.info {
+    padding: 0.75rem 0.9rem;
+}
+
+.info h2 {
+    font-size: var(--fuente-base);
+    color: var(--dorado);
+    margin-bottom: 0.4rem;
+}
+
+.info p {
+    font-size: var(--fuente-sm);
+    color: var(--gris);
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    color: #777;
+    font-size: var(--fuente-sm);
+    margin-top: 1.875rem;
+    padding: 1rem;
+}
+
+/* Tablets - 3 columnas se mantienen */
+@media (max-width: 900px) {
+    .contenedor {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Móviles - 2 columnas */
+@media (max-width: 600px) {
+    .contenedor {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .imagen-wrapper img {
+        height: 9rem;
+    }
+
+    header h1 {
+        font-size: 1.1rem;
+    }
+}

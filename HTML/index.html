@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>Portafolio</title>
+</head>
+
+<body>
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <header class="barra-superior">
+        <h1>Nestor Duran</h1>
+        <nav class="nav-links">
+            <a class="link" href="#Sobre-mi">Sobre mi</a>
+            <a class="link" href="#Proyectos">Proyectos</a>
+            <a class="link" href="#Contacto">Contacto</a>
+            <a class="link" href="mascotas.html">Ir a mascotas</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- SECCIÓN: SOBRE MÍ -->
+        <section class="sobremi" id="Sobre-mi">
+            <div class="card">
+                <!-- Mensaje de bienvenida generado por JS -->
+                <p class="bienvenida-msg" id="bienvenida"></p>
+
+                <h2>Sobre mi</h2>
+                <p>Soy Nestor Duran, estudiante de desarrollo de software. Me apasiona crear soluciones con Python, HTML, CSS y JavaScript. Siempre buscando aprender y mejorar.</p>
+
+                <!-- Botón que muestra u oculta info extra -->
+                <button id="btn-extra">Ver más sobre mí</button>
+
+                <div class="extra-oculto" id="info-extra">
+                    <p>También me gusta trabajar en proyectos personales, aprender nuevas tecnologías y compartir lo que aprendo con otros.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN: PROYECTOS -->
+        <section class="proyectos" id="Proyectos">
+            <div class="card">
+                <h2>Proyectos</h2>
+
+                <!-- Grid de proyectos - 2 columnas en escritorio, 1 en móvil -->
+                <ul class="contenedor-proyectos">
+
+                    <li class="proyecto">
+                        <a href="https://github.com/Isac-Coder/ejercicio_Cajero" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/GitHub.svg" alt="Cajero electronico">
+                            <p>Cajero electronico</p>
+                        </a>
+                    </li>
+
+                    <li class="proyecto">
+                        <a href="https://github.com/Nesdael/Proyecto_Inventario_Python" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/GitHub.svg" alt="Inventario">
+                            <p>Inventario</p>
+                        </a>
+                    </li>
+
+                    <li class="proyecto">
+                        <a href="https://github.com/DylanSrz/Gestion_pedidos" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/GitHub.svg" alt="Gestion de usuario">
+                            <p>Gestion de usuario</p>
+                        </a>
+                    </li>
+
+                    <li class="proyecto">
+                        <a href="https://github.com/Nesdael/prueba" target="_blank" rel="noopener noreferrer">
+                            <img src="../img/GitHub.svg" alt="Registro de estudiantes">
+                            <p>Registro de estudiantes</p>
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN: CONTACTO -->
+        <section class="contacto" id="Contacto">
+            <div class="card">
+                <h2>Contacto</h2>
+                <form>
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" placeholder="Ingrese su correo">
+
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" rows="4"></textarea>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>©2026</strong> Nes Dev · Hecho con HTML, CSS y JavaScript</p>
+    </footer>
+
+    <!-- Script de interactividad -->
+    <script src="../JS/script.js"></script>
+
+</body>
+
+</html>
